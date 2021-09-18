@@ -2,8 +2,14 @@ var obj = {
   key: [2, 1, 5]
 };
 
-function getSquaredElementsAtProperty(obj, key) {
-    // your code here
+function getSquaredElementsAtProperty(o, k) {
+    if(!k in o || !Array.isArray(o[k])){
+      return [];
+    }else{
+        return o[k].map(function(item){
+            return item*item;
+        })
+    }
 }
 
 var output = getSquaredElementsAtProperty(obj, 'key');
