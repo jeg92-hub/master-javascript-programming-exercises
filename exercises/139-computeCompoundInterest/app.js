@@ -1,5 +1,8 @@
 function computeCompoundInterest(principal, interestRate, compoundingFrequency, timeInYears) {
   // your code here
+  const amount = principal * (Math.pow((1 + (interestRate / compoundingFrequency)), (compoundingFrequency * timeInYears)));
+   const interest = amount - principal;
+   return interest;
 }
 
 var output = computeCompoundInterest(1500, .043, 4, 6);
