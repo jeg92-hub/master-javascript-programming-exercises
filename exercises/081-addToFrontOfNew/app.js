@@ -1,6 +1,9 @@
 
 function addToFrontOfNew(arr, element) {
     // Write your function here
+    var newArray = [].concat(arr);
+    newArray.unshift(element);
+    return newArray;
 }
 
 var input = [1, 2];

@@ -1,5 +1,8 @@
 function addToBackOfNew(arr, element) {
     // Write your function here
+    let newArray = [].concat(arr);
+    newArray.push(element);
+    return newArray;
 }
 
 var input = [1, 2];
